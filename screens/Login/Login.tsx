@@ -8,6 +8,10 @@ import { AppLogo } from "@/components/images/AppLogo";
 import { GoogleIcon } from "@/components/icons/GoogleIcon";
 import { AppleIcon } from "@/components/icons/AppleIcon";
 import { globalStyles } from "@/constants/globalStyles";
+import { useNotification } from "@/context/NotificationContext";
+import { useLoading } from "@/context/LoadingContext";
+import AsyncStorage from "@react-native-async-storage/async-storage";
+
 
 const Login = () => {
   const router = useRouter();
@@ -15,11 +19,45 @@ const Login = () => {
   const [password, setPassword] = useState("");
   const [isEmailValid, setIsEmailValid] = useState(true);
   const [isPasswordValid, setIsPasswordValid] = useState(true);
+  const { showNotification } = useNotification();
+  const { showLoading, hideLoading } = useLoading();
 
-  const handleLogin = () => {
+
+  const handleLogin = async () => {
     console.log("Login attempted with:", { email, password });
+    if (email && password) {
+      await loginUser(email, password);
+    } else {
+      showNotification("Please fill in all fields", "", "warning");
+    }
     // Add login logic here
   };
+
+  const loginUser = async (email: string, password: string) => {
+    try {
+      showLoading();
+      await new Promise((resolve) => setTimeout(resolve, 1000));
+      const isLoginSuccessful = Math.random() > 0.5;
+      if (isLoginSuccessful) {
+        await AsyncStorage.setItem("completedOnboarding", "yes");
+        await AsyncStorage.setItem("token", "usertoken");
+        // router.push("/onboarding");
+        router.push("/home");
+      } else {
+        showNotification("Invalid email or password", "", "failure", () =>
+          loginUser(email, password)
+        );
+      }
+    } catch (error) {
+      showNotification("An error occured", "", "failure", () =>
+        loginUser(email, password)
+      );
+    } finally {
+      hideLoading();
+    }
+  };
+
+
 
   const handleGoogleLogin = () => {
     console.log("Google login attempted");

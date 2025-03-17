@@ -4,9 +4,14 @@ import { AppLogo } from "@/components/images/AppLogo";
 import { ThumpsUpIcon } from "@/components/icons/ThumpsUpIcon";
 import { globalStyles } from "@/constants/globalStyles";
 import { theme } from "@/constants/theme";
+import AsyncStorage from "@react-native-async-storage/async-storage";
+
 
 const CompletedScreen = () => {
-  const handleCompleted = () => {
+  const handleCompleted = async () => {
+    await AsyncStorage.setItem(
+      "completedOnboarding", "onboarding completed"
+    );
     console.log("Navigate to home page");
     // other logic
   };

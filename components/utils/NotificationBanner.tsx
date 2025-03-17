@@ -98,7 +98,7 @@ const styles = StyleSheet.create({
   title: {
     color: "#fff",
     fontSize: 14,
-    fontFamily: theme.fonts.BWModelicaSS01[700],
+    // fontFamily: theme.fonts.BWModelicaSS01[700],
   },
   description: {
     color: "#fff",
@@ -109,7 +109,7 @@ const styles = StyleSheet.create({
   tryAgainText: {
     textDecorationLine: "underline",
     fontSize: 10,
-    fontFamily: theme.fonts.BWModelicaSS01[600],
+    // fontFamily: theme.fonts.BWModelicaSS01[600],
     color: theme.colors.base.baseWhite,
   },
   closeButton: {
