@@ -38,15 +38,15 @@ export const theme = {
       success: "rgba(39, 174, 96, 1)",
     },
   },
-  fonts: {
-    InterSS01: {
-      "100": "Inter18Light",
-      "200": "Inter18Regular",
-      "300": "Inter18Medium",
-      "400": "Inter18SemiBold",
-      "500": "Inter18Bold",
-      "600": "Inter18Black",
-      "600italic": "Inter18BlackItalic",
-    },
-  },
+  // fonts: {
+  //   InterSS01: {
+  //     "100": "Inter18Light",
+  //     "200": "Inter18Regular",
+  //     "300": "Inter18Medium",
+  //     "400": "Inter18SemiBold",
+  //     "500": "Inter18Bold",
+  //     "600": "Inter18Black",
+  //     "600italic": "Inter18BlackItalic",
+  //   },
+  // },
 };

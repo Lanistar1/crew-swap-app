@@ -77,7 +77,7 @@ const Login = () => {
         />
 
         <Pressable
-          onPress={() => router.push("/reset-password")}
+          onPress={() => router.push("/(auth)/reset-password")}
           style={styles.forgotPassword}
         >
           <Text style={styles.forgotPasswordText}>Forgot Password?</Text>
@@ -157,7 +157,7 @@ const Login = () => {
         </Pressable>
 
         <Pressable
-          onPress={() => router.replace("./signup")}
+          onPress={() => router.push("/(auth)/signup")}
           style={styles.signUpLink}
         >
           <Text style={styles.signUpText}>
@@ -185,7 +185,7 @@ const styles = StyleSheet.create({
     marginTop: 20,
   },
   title: {
-    fontFamily: theme.fonts.InterSS01[600],
+    // fontFamily: theme.fonts.InterSS01[600],
     fontSize: 40,
     color: theme.colors.neutrals?.neutral900 || "#000000",
   },
@@ -193,7 +193,7 @@ const styles = StyleSheet.create({
     color: theme.colors.error?.error200 || "#FF8955",
   },
   subtitle: {
-    fontFamily: theme.fonts.InterSS01[600],
+    // fontFamily: theme.fonts.InterSS01[600],
     fontSize: 24,
     color: theme.colors.neutrals?.neutral900 || "#000000",
     marginVertical: 20,
@@ -203,12 +203,12 @@ const styles = StyleSheet.create({
     marginBottom: 20,
   },
   forgotPasswordText: {
-    fontFamily: theme.fonts.InterSS01[400],
+    // fontFamily: theme.fonts.InterSS01[400],
     fontSize: 14,
     color: theme.colors.primary?.primary,
   },
   orText: {
-    fontFamily: theme.fonts.InterSS01[400],
+    // fontFamily: theme.fonts.InterSS01[400],
     fontSize: 16,
     color: theme.colors.neutrals?.neutral900 || "#000000",
     marginVertical: 10,
@@ -217,7 +217,7 @@ const styles = StyleSheet.create({
     marginTop: 20,
   },
   signUpText: {
-    fontFamily: theme.fonts.InterSS01[400],
+    // fontFamily: theme.fonts.InterSS01[400],
     fontSize: 14,
     color: theme.colors.neutrals?.neutral900 || "#000000",
   },
