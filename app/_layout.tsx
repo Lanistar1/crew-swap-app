@@ -7,7 +7,6 @@ import { StatusBar } from "expo-status-bar";
 import { useEffect } from "react";
 import { GestureHandlerRootView } from "react-native-gesture-handler";
 import { NotificationProvider } from "@/context/NotificationContext";
-
 import "react-native-reanimated";
 import { ScrollView, View } from "react-native";
 

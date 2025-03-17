@@ -2,6 +2,7 @@
 // import { View, ActivityIndicator } from "react-native";
 // // import { Onboarding } from "../screens/Onboarding";
 // // import { OnePagerScreen } from "@/screens/OnePagerScreen";
+// import Login from "@/screens/Login/Login";
 // import AsyncStorage from "@react-native-async-storage/async-storage";
 // import { StyleSheet } from "react-native";
 // import { useNotification } from "@/context/NotificationContext";
@@ -50,7 +51,7 @@
 
 //   return (
 //     <View style={styles.container}>
-//       {/* <Onboarding /> */}
+//       <Login />
 //     </View>
 //   );
 // }
@@ -69,16 +70,55 @@
 //   },
 // });
 
-import { View, Text } from "react-native";
-import Login from "@/screens/Login/Login";
+import { View, Text, Pressable, StyleSheet } from "react-native";
 import React from "react";
+import { globalStyles } from "@/constants/globalStyles";
+import { useRouter } from "expo-router";
+import { theme } from "@/constants/theme";
 
 const index = () => {
+  const router = useRouter();
+
+  const handleLogin = async () => {
+    console.log("Login attempted with:");
+    router.push("/(auth)/login");
+    // Add login logic here
+  };
+
   return (
-    <View>
-      <Login />
+    <View style={styles.container}>
+      <Pressable
+        style={[
+          globalStyles.button,
+          {
+            backgroundColor: theme.colors.primary.primary,
+          },
+        ]}
+        onPress={handleLogin}
+      >
+        <Text
+          style={[
+            globalStyles.buttonText,
+            {
+              color: theme.colors.base.baseWhite,
+            },
+          ]}
+        >
+          Get started
+        </Text>
+      </Pressable>
     </View>
   );
 };
+
+const styles = StyleSheet.create({
+  container: {
+    flexGrow: 1,
+    justifyContent: "center",
+    alignItems: "center",
+    width: "100%",
+    backgroundColor: "rgba(255, 255, 255, 0.9)",
+  },
+});
 
 export default index;
