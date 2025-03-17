@@ -1,13 +1,12 @@
-// import CallPage from "@/screens/Tasks/CallPage";
 import { theme } from "@/constants/theme";
 import { StyleSheet } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
-import { Text } from "react-native"
+import CompletedScreen from "@/screens/Onboarding/CompletedScreen";
 
 export default function App() {
   return (
     <SafeAreaView style={styles.container}>
-      <Text>Good</Text>
+      <CompletedScreen />
     </SafeAreaView>
   );
 }
@@ -15,6 +14,7 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    paddingHorizontal: 20,
     backgroundColor: theme.colors.neutrals.neutrals150,
   },
 });

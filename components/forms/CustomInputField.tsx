@@ -150,9 +150,9 @@ const styles = StyleSheet.create({
     width: "100%",
   },
   label: {
-    fontFamily: theme.fonts.InterSS01?.["400"] || "sans-serif",
-    fontSize: 16,
-    color: theme.colors.neutrals.neutral800,
+    // fontFamily: theme.fonts.InterSS01?.["400"] || "sans-serif",
+    fontSize: 15,
+    color: theme.colors.neutrals.neutral900,
     marginBottom: 5,
   },
   inputWrapper: {
@@ -168,7 +168,7 @@ const styles = StyleSheet.create({
     flex: 1,
     fontSize: 16,
     paddingVertical: 10,
-    fontFamily: theme.fonts.InterSS01?.["400"] || "sans-serif",
+    // fontFamily: theme.fonts.InterSS01?.["400"] || "sans-serif",
     color: theme.colors.neutrals.neutral1000,
   },
   phoneInput: {
@@ -177,7 +177,7 @@ const styles = StyleSheet.create({
   countryCode: {
     color: theme.colors.neutrals.neutral800,
     fontSize: 16,
-    fontFamily: theme.fonts.InterSS01?.["400"] || "sans-serif",
+    // fontFamily: theme.fonts.InterSS01?.["400"] || "sans-serif",
     marginRight: 5,
   },
   inputError: {
@@ -192,10 +192,10 @@ const styles = StyleSheet.create({
   toggleText: {
     color: theme.colors.neutrals.neutral800,
     fontSize: 12,
-    fontFamily: theme.fonts.InterSS01?.["400"] || "sans-serif",
+    // fontFamily: theme.fonts.InterSS01?.["400"] || "sans-serif",
   },
   errorMessage: {
-    fontFamily: theme.fonts.InterSS01?.["400"] || "sans-serif",
+    // fontFamily: theme.fonts.InterSS01?.["400"] || "sans-serif",
     fontSize: 12,
     color: theme.colors.error.error200,
     marginTop: 5,
@@ -212,7 +212,7 @@ const styles = StyleSheet.create({
   criteriaText: {
     fontSize: 10,
     color: theme.colors.neutrals.neutral600,
-    fontFamily: theme.fonts.InterSS01?.["400"] || "sans-serif",
+    // fontFamily: theme.fonts.InterSS01?.["400"] || "sans-serif",
   },
 });
 
