@@ -36,7 +36,7 @@ export default function TabLayout() {
     >
       <Tabs.Screen
         name="index"
-        options={() => ({
+        options={{
           title: "Schedule",
           tabBarIcon: ({ focused }) => (
             <Image
@@ -48,53 +48,8 @@ export default function TabLayout() {
               style={{ width: 24, height: 24 }}
             />
           ),
-          headerBackVisible: false,
-          headerShadowVisible: false,
-          headerLeft: () => <AppLogo />,
-          headerTitle: "",
-          headerRight: () => (
-            <View
-              style={{
-                display: "flex",
-                alignItems: "center",
-                flexDirection: "row",
-                gap: 20,
-                marginRight: 15,
-              }}
-            >
-              <Pressable>{/* <CartLargeOutlineIcon /> */}</Pressable>
-              <Pressable
-              // onPress={() => router.push("/home/(pages)/notificaton")}
-              >
-                <QuestionIcon />
-                <Text
-                  style={{
-                    position: "absolute",
-                    right: 0,
-                    top: 0,
-                    width: 15,
-                    height: 15,
-                    backgroundColor: theme.colors.warning.warning,
-                    borderRadius: 50,
-                    display: "flex",
-                    flexDirection: "row",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    fontSize: 9,
-                    // fontFamily: theme.fonts.BWModelicaSS01[500],
-                    color: theme.colors.base.baseWhite,
-                    paddingLeft: 5,
-                  }}
-                >
-                  0
-                </Text>
-              </Pressable>
-            </View>
-          ),
-          headerStyle: {
-            backgroundColor: theme.colors.neutrals.neutrals150,
-          },
-        })}
+          headerShown: false, // Hides the header completely
+        }}
       />
 
       <Tabs.Screen
@@ -140,20 +95,7 @@ export default function TabLayout() {
           headerShadowVisible: false,
           headerLeft: () => <AppLogo />,
           headerTitle: "",
-          headerRight: () => (
-            <Pressable onPress={() => router.push("/login")}>
-              <Text
-                style={{
-                  color: theme.colors.warning.warning,
-                  // fontFamily: theme.fonts.BWModelicaSS01[700],
-                  fontSize: 12,
-                  marginRight: 15,
-                }}
-              >
-                Logout
-              </Text>
-            </Pressable>
-          ),
+          headerRight: () => <Text></Text>,
           headerStyle: {
             backgroundColor: theme.colors.neutrals.neutrals150,
           },
@@ -161,7 +103,7 @@ export default function TabLayout() {
       />
 
       <Tabs.Screen
-        name="Settings"
+        name="settings"
         options={() => ({
           title: "Settings",
           tabBarIcon: ({ focused }) => (
@@ -178,22 +120,9 @@ export default function TabLayout() {
           headerShadowVisible: false,
           headerLeft: () => <AppLogo />,
           headerTitle: "",
-          headerRight: () => (
-            <Pressable onPress={() => router.push("/login")}>
-              <Text
-                style={{
-                  color: theme.colors.warning.warning,
-                  // fontFamily: theme.fonts.BWModelicaSS01[700],
-                  fontSize: 12,
-                  marginRight: 15,
-                }}
-              >
-                Logout
-              </Text>
-            </Pressable>
-          ),
+          headerRight: () => <Text></Text>,
           headerStyle: {
-            backgroundColor: "#ffffff",
+            backgroundColor: theme.colors.neutrals.neutrals150,
           },
         })}
       />

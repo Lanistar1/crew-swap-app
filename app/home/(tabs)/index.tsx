@@ -1,11 +1,11 @@
 import { theme } from "@/constants/theme";
-// import { Home } from "@/screens/Home/Index";
 import { View, Text, StyleSheet } from "react-native";
+import Schedule from "@/screens/Home/Schedule";
 
 export default function Tab() {
   return (
     <View style={styles.container}>
-      {/* <Home /> */}
+      <Schedule />
     </View>
   );
 }
